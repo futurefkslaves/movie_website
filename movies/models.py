@@ -5,7 +5,6 @@ from django.urls import reverse
 
 
 class Category(models.Model):
-    """Категории"""
     name = models.CharField("Категория", max_length=150)
     description = models.TextField("Описание")
     url = models.SlugField(max_length=160, unique=True)
@@ -19,7 +18,6 @@ class Category(models.Model):
 
 
 class Actor(models.Model):
-    """Актеры и режиссеры"""
     name = models.CharField("Имя", max_length=100)
     age = models.PositiveSmallIntegerField("Возраст", default=0)
     description = models.TextField("Описание")
@@ -37,7 +35,6 @@ class Actor(models.Model):
 
 
 class Genre(models.Model):
-    """Жанры"""
     name = models.CharField("Имя", max_length=100)
     description = models.TextField("Описание")
     url = models.SlugField(max_length=160, unique=True)
@@ -51,7 +48,6 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
-    """Фильм"""
     title = models.CharField("Название", max_length=100)
     tagline = models.CharField("Слоган", max_length=100, default='')
     description = models.TextField("Описание")
